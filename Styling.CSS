@@ -31,11 +31,17 @@
   background-color: lightgrey;
   border-radius: 12px;
   border: 3px solid;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
 }
 .calcbt {
   border-radius: 50%;
   width: 22%;
   height: 100%;
+  color: rgb(21, 0, 255);
+  font-size: 2rem;
 }
 .calcbt:hover {
   box-shadow: 0 0 5px blue;
@@ -52,4 +58,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.button-1,.button-2,.button-3,.button-4,.button-20{
+  background-color: tomato;
+}
+.button-8,.button-12,.button-16{
+  background-color: aqua;
 }
