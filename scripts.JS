@@ -9,4 +9,7 @@ function Clear(){
 }
 function Erase (){
    bar.textContent= bar.textContent.slice(0, -1);
-}
+}  
+ function calculate(){
+    bar.textContent=eval(bar.textContent)
+ }
