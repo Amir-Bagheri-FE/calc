@@ -27,6 +27,7 @@
   box-shadow: 0 0 5px gray;
 }
 .screen {
+  padding: 10px;
   height: 13%;
   background-color: lightgrey;
   border-radius: 12px;
@@ -42,6 +43,9 @@
   height: 100%;
   color: rgb(21, 0, 255);
   font-size: 2rem;
+}
+.calcbt:active{
+  border: 3px solid;
 }
 .calcbt:hover {
   box-shadow: 0 0 5px blue;
@@ -59,7 +63,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.button-1,.button-2,.button-3,.button-4,.button-20{
+.button-1,.button-2,.button-3,.button-4,.button-20,.button-18,.button-17{
   background-color: tomato;
 }
 .button-8,.button-12,.button-16{
