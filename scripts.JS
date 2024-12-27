@@ -3,7 +3,8 @@ let bar =document.querySelector('.screen');
 let counter=0;
 //displaying clicked item
 function Display(text) {
-   bar.textContent+=text.innerText;
+   if(typeof text=='string'){bar.textContent+=text}
+   else if(typeof text=='object'){bar.textContent+=text.textContent}
 }
 function Clear(){
     bar.textContent=''
@@ -30,3 +31,26 @@ function Erase (){
   calculate()
   bar.textContent = Number(bar.textContent**2);
  }
+ document.addEventListener('keydown',(event)=>{
+    if(event.key=='Backspace'){Erase()}
+   })
+   document.addEventListener('keypress',(event)=>{
+      if(event.key=='='){calculate()}
+      else if(event.key=='*'){Display('×')}
+      else if(event.key=='c'){Clear()}
+      else if(event.key=='-'){Display('-')}
+      else if(event.key=='/'){Display('÷')}
+      else if(event.key=='+'){Display('+')}
+      else if(event.key=='^'){Display('^')}
+      else if(event.key=='.'){Display('.')}
+      else if(event.key=='0'){Display('0')}
+      else if(event.key=='1'){Display('1')}
+      else if(event.key=='2'){Display('2')}
+      else if(event.key=='3'){Display('3')}
+      else if(event.key=='4'){Display('4')}
+      else if(event.key=='5'){Display('5')}
+      else if(event.key=='6'){Display('6')}
+      else if(event.key=='7'){Display('7')}
+      else if(event.key=='8'){Display('8')}
+      else if(event.key=='9'){Display('9')}
+      })
