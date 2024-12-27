@@ -53,4 +53,21 @@ function Erase (){
       else if(event.key=='7'){Display('7')}
       else if(event.key=='8'){Display('8')}
       else if(event.key=='9'){Display('9')}
-      })
+      });
+const theme=document.querySelector('.theme');
+let light=true
+let header=document.querySelector('.head')
+theme.addEventListener('click',()=>{
+if(light){
+   document.querySelector('body').style.backgroundColor='#1a1a1a';
+   header.style.backgroundColor='#9b9b9b';
+   theme.classList.replace('fa-moon','fa-sun')
+   light=false
+}
+else{
+   document.querySelector('body').style.backgroundColor='';
+   header.style.backgroundColor='antiquewhite';
+   theme.classList.replace('fa-sun','fa-moon');
+   light=true
+}
+})
