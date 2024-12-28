@@ -71,3 +71,38 @@ else{
    light=true
 }
 })
+let themeNum=1;
+const calcTheme=document.querySelector('.fa-paint-brush')
+let calculator=document.querySelector('.calculator');
+let oprator=document.getElementsByClassName('dif');
+let oprator2=document.getElementsByClassName('dif2');
+calcTheme.addEventListener('click',()=>{
+   if(themeNum==1){
+      calculator.classList.replace('theme1','theme2');
+      for(let k=0;k<oprator.length;k++){
+         oprator[k].style.backgroundColor='aqua'
+      }
+      themeNum=2;
+   }
+   else if(themeNum==2){
+      calculator.classList.replace('theme2','theme3')
+      for(let k=0;k<oprator.length;k++){
+         oprator[k].style.backgroundColor='lightgreen'
+      }
+      for(let k=0;k<oprator2.length;k++){
+         oprator2[k].style.backgroundColor='yellowgreen'
+      }
+      themeNum=3;
+   }
+  else if(themeNum==3){
+      calculator.classList.replace('theme3','theme1')
+      for(let k=0;k<oprator.length;k++){
+         oprator[k].style.backgroundColor='tomato'
+      }
+      for(let k=0;k<oprator2.length;k++){
+         oprator2[k].style.backgroundColor='aqua'
+      }
+      themeNum=1;
+   }
+
+})

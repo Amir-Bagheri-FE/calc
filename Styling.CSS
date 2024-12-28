@@ -26,10 +26,21 @@
 .calculator {
   padding-top: 5px;
   width: 30%;
-  background-color: gray;
   border-radius: 12px;
   height: 80vh;
   box-shadow: 0 0 5px gray;
+}
+.theme1{
+  background-color: gray;
+}
+.theme2{
+  background-color: rgb(38, 255, 0);
+}
+.theme3{
+  background-color: rgb(4, 50, 255);
+}
+.fas{
+  cursor: pointer;
 }
 .screen {
   padding: 10px;
