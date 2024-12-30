@@ -1,10 +1,28 @@
 const allbtns = document.querySelector(".calcbtn");
 let bar =document.querySelector('.screen');
 let counter=0;
+let opratorArthmetic=document.getElementsByClassName('oprator');
 //displaying clicked item
 function Display(text) {
-   if(typeof text=='string'){bar.textContent+=text}
-   else if(typeof text=='object'){bar.textContent+=text.textContent}
+   let  opratorsArray=["+", "-", "^", "×", "÷",'.']
+   if(typeof text=='string'){
+      if(opratorsArray.includes(text)){
+         if(opratorsArray.includes(bar.textContent.slice(-1))){
+            bar.textContent=bar.textContent.slice(0,-1)+text 
+         }
+         else{bar.textContent+=text}
+          
+      }else{bar.textContent+=text} 
+   }
+   else if(typeof text=='object'){
+      if(opratorsArray.includes(text.textContent)){
+         if(opratorsArray.includes(bar.textContent.slice(-1))){
+            bar.textContent=bar.textContent.slice(0,-1)+text.textContent
+         }
+         else{bar.textContent+=text.textContent}
+      }else{ bar.textContent+=text.textContent}
+     
+   }
 }
 function Clear(){
     bar.textContent=''
@@ -103,6 +121,4 @@ calcTheme.addEventListener('click',()=>{
          oprator2[k].style.backgroundColor='aqua'
       }
       themeNum=1;
-   }
-
-})
+   }});

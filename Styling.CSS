@@ -30,6 +30,12 @@
   height: 80vh;
   box-shadow: 0 0 5px gray;
 }
+@media (max-width:566px) {
+  .calculator{width:60%;}
+}
+@media (max-width:966px) {
+  .calculator{width:60%;}
+}
 .theme1{
   background-color: gray;
 }
